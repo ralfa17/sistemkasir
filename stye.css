@@ -1,0 +1,246 @@
+/* Font Poppins dari Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Background gradient cerah: biru ke mint */
+    background: linear-gradient(135deg, #e3f2fd 0%, #b2dfdb 100%);
+    color: #333;
+    line-height: 1.6;
+    /* Efek fade-in saat load */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header modern */
+header {
+    background: rgba(76, 175, 80, 0.9); /* Glassmorphism */
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+header i {
+    font-size: 2em;
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Main layout */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* Produk section dengan glassmorphism */
+#produk {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    color: #4caf50;
+}
+
+.card p {
+    margin: 0 0 15px 0;
+    font-weight: bold;
+}
+
+.card button {
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+}
+
+.card button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* Keranjang section dengan glassmorphism */
+#keranjang {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#keranjang-list {
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.item button {
+    background: linear-gradient(135deg, #ff5722, #f4511e);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.item button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
+}
+
+#total-belanja {
+    text-align: right;
+    font-size: 1.2em;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Pembayaran section dengan neumorphism */
+#pembayaran {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    grid-column: 1 / -1; /* Span across both columns */
+}
+
+#pembayaran label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+#pembayaran input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 15px;
+    background: #f0f0f0;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.8); /* Neumorphism */
+    transition: all 0.3s ease;
+}
+
+#pembayaran input:focus {
+    box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.15), inset -8px -8px 15px rgba(255, 255, 255, 0.9);
+    outline: none;
+}
+
+#pembayaran button {
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#pembayaran button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+#kembalian {
+    margin-top: 15px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
